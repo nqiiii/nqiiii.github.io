@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>NOIP2018游记 | nqiiii's blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.ico"><link rel="apple-touch-icon" href="/blog/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/blog/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">NOIP2018游记</h1><a id="logo" href="/blog/.">nqiiii's blog</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/blog/."><i class="fa fa-home"> 首页</i></a><a href="/blog/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/blog/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">NOIP2018游记</h1><div class="post-meta">Nov 10, 2018</div><a class="disqus-comment-count" href="/blog/2018/11/10/NOIP2018/#vcomment"><span class="valine-comment-count" data-xid="/blog/2018/11/10/NOIP2018/"></span><span> 条评论</span></a><div class="post-content"><p>NOIP2018爆零记。</p>
+<a id="more"></a>
+<h3 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h3><p>由于今年我们学校是主办方，所以就没法住宾馆，只能住寝室。<del>(不能随意颓废了。。。)</del></p>
+<p>然而考前颓废有助于发挥是常识，于是我就冒着被查表的风险开始在机房放飞自我了。</p>
+<p>晚上看了几集番，刷了会知乎(看各路神仙对NOIP的毒奶)，由于要求提前回去睡觉，于是在8:30就回寝室睡觉了。</p>
+<h3 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h3><p>早上由于要出发去紫金港，所以6:30就起床了。然后就带上了自己的电脑，在车上看了几集番。</p>
+<p>到了紫金港，和同学奶了几波NOIP的题<del>(和贺指导)</del>就进考场了。</p>
+<p>然后开题。</p>
+<p>看到€€£换了评测机很开心，觉得不会卡常了。</p>
+<p>先看T1，一开始想每次贪心减整个序列，最小值减成0后再分治下去。想一想发现这个做法要建笛卡尔树，显然不是T1难度。然后想倒过来从大到小枚举来做上面的过程，相等的段可以用并查集维护。然后觉得这好像也不是T1难度。最后思考了一下，发现自己sb了，这题似乎和前天的NOIP模拟题T1似乎一模一样，瞎贪心一波就好了。然后随便写写就写完了。</p>
+<p>然后看T2，看完之后先大力猜一波结论，感觉如果一个数可以被其他数表示出来就把它删掉就好了。然后随便证明了一下(大概就是最小值肯定得选，然后次小值如果不能被最小值表示出来也就肯定得选，以此类推)。然后就是个无脑背包了。</p>
+<p>最后开了T3，做好了题目很♂dark♂的准备。看完题后，显然得二分答案。二分完之后题目变成了最多能选多少条长度$\geqslant v$的边不相交的链。首先必须得先最大化每个子树内的路径数，在最大化路径数的前提下需要最大化从子树的根向下的最长的没有边被选的链。然后这个东西怎么转移呢，我们要做的就是拼接两个子树的向下的链。如果只是要求最大化路径数就直接sort一下然后从大到小用two pointers贪心一下，如果还要求剩下的向下的链尽可能长，我们就二分一下哪条剩下，然后直接再用前面的贪心check一下看答案会不会变就行了。</p>
+<p>由于这次T3出乎意料的简单，导致我三道题写完后10:00都没到，于是就开始颓emacs的小隔膜到比赛结束。。。</p>
+<p>出考场后发现大部分人都ak了，感觉难题都被放Day2了。</p>
+<p>默写了考场代码后测了测洛谷数据，发现都过了。然后发现T1是NOIP2013原题，数据范围都没改。(€€£: 我抄我自己)</p>
+<p>Day2爆炸预定。。。</p>
+<h3 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h3><p>咕了一个星期的Day2游记。。。</p>
+<p>开场看题，先看了看T1，很快写完了，然后开T2。</p>
+<p>看到T2这么长的题面，突然有一种不好的预感，然后看到了数据范围$n \leqslant 8$，感觉这是一道状压题。</p>
+<p>做了一会儿，发现矩阵合法的条件:</p>
+<ol>
+<li><p>一个数不能小于它右上角的数。</p>
+</li>
+<li><p>如果一个数和它右上角的数相等，那么它右边的格子到终点的所以路径都必须相同。</p>
+</li>
+</ol>
+<p>然后我觉得这个东西太复杂了，一定有更优美的性质(最后好像并没有)，然后就准备打个暴力看一下矩阵的性质。</p>
+<p>打了暴力没有发现什么性质，然而发现了在$n &gt; 1$，$m$很大时答案都是乘$3$，然后发现我的暴力只能跑$5 \times 5$。看了看发现$n \leqslant 3$有$65$分，然后就不管了。</p>
+<p>然后还剩两个小时，看T3，发现没啥思维难度，是道码农题。由于我以为其他人都会T2，我觉得我只能靠T3拉回局面，然后就硬着头皮写T3的满分做法了。还好在比赛结束前拍上了，然后就不管了。</p>
+<p>出考场后发现没多少人会T2，暂时松了一口气。</p>
+<p>感觉把一年的RP都用在NOIP上了。。。</p>
+</div><script type="text/javascript" src="/blog/js/share.js?v=0.0.0" async></script><a class="article-share-link" data-url="https://nqiiii.coding.me/2018/11/10/NOIP2018/" data-id="ckki1k3g6000h25wm9k5otva4" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3aS27DMAxFUe9/0+k0E6v3kXJRU1ejIB/LxwEIkuJ14fX5Wnfvr9f6V+tdti0ZMmS8lkG2JxuQX61fr6+wfjQyZMg4gXF3W2TLNLCme62/L0OGDBlrRj9w311HhgwZMjqMNJjyxFGGDBky1gwSKNHlGuVrJw2VIUPGbAbvuv/960fON2TIkPEqxidctQDNE8fiXcmQIWM0I92GN8tIaUq+GQx/yJAhYyiDFJNpWbt3OAPBZMiQcQyDfFoLjvyhFJt0MmTIGM3g4a8/4MXTTR6y4yguQ4aMFzL4LfYHI2pNN7SLDBkyDmCkJSVvn5FhMoL/5UHIkCHjYMauwMoL1LRIRgcDMmTIGMHgG6fFbTq6kSaLMmTIOIexTg2fCMc8iYynRWTIkDGUwVfaeqsdJMRHpzJkyBjNIEeYPHSSY8h+olkctpAhQ8ZrGby5Xxub2Pyk066hDBkyBjF44z5N19IRjfQIQYYMGScw+g2yWip54cXbczJkyDiTwXtZnYZdnAiue4cyZMg4gEFC6q52P08WZciQIaOfuvH307SSlMQyZMiYzXgisUuDMr9C8D/IkCFjEKPW9uLHALXClaeJMUyGDBmvZfAgmzbCakMVtVJZhgwZJzDSwJfeOg+ytUNNGTJkyOAMHogJjD8sGTJkyKgNhKUlbnogujngypAh498zeLu/32IjQTYOxzJkyBjNSIcqOseKpJ1Xa97JkCFjKOMH6B7RP0BqaKAAAAAASUVORK5CYII=">分享</a><div class="tags"><a href="/blog/tags/其他/">其他</a></div><div class="post-nav"><a class="pre" href="/blog/2018/12/24/BZOJ4915/">[BZOJ4915]简单的数字题</a><a class="next" href="/blog/2018/10/25/miller-rabin-pollard-rho/">Miller Rabin 算法和 Pollard Rho 算法</a></div><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script><script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'true' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'BYKaRCieVXQ5YWKkUU5uwmsC-gzGzoHsz',
+  appKey:'Prl07uMv3IzEz1fFDW1F78b1',
+  placeholder:'求大佬指点',
+  avatar:'retro',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-bookmark-o"> 一言</i></div><br><div id="hitokoto" style="text-align:center; font-size: 1em;">获取中...</div><div id="from" style="text-align:right; margin-top: 15px; font-size: 0.9em; color: rgb(102, 102, 102);">——</div><script type="text/javascript" src="/blog/js/hitokoto.js"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://blog.csdn.net/Timsei/" title="Timsei" target="_blank">Timsei</a><ul></ul><a href="https://www.cnblogs.com/mangoyang/" title="mangoyang" target="_blank">mangoyang</a><ul></ul><a href="https://tenecnt.github.io/" title="wxs666666" target="_blank">wxs666666</a></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/blog/tags/数学/" style="font-size: 15px;">数学</a> <a href="/blog/tags/kd树/" style="font-size: 15px;">kd树</a> <a href="/blog/tags/平衡树/" style="font-size: 15px;">平衡树</a> <a href="/blog/tags/可持久化/" style="font-size: 15px;">可持久化</a> <a href="/blog/tags/分块/" style="font-size: 15px;">分块</a> <a href="/blog/tags/随机化/" style="font-size: 15px;">随机化</a> <a href="/blog/tags/动态规划/" style="font-size: 15px;">动态规划</a> <a href="/blog/tags/二分/" style="font-size: 15px;">二分</a> <a href="/blog/tags/搜索/" style="font-size: 15px;">搜索</a> <a href="/blog/tags/矩阵树定理/" style="font-size: 15px;">矩阵树定理</a> <a href="/blog/tags/计数/" style="font-size: 15px;">计数</a> <a href="/blog/tags/其他/" style="font-size: 15px;">其他</a> <a href="/blog/tags/网络流/" style="font-size: 15px;">网络流</a> <a href="/blog/tags/测试/" style="font-size: 15px;">测试</a> <a href="/blog/tags/生成函数/" style="font-size: 15px;">生成函数</a> <a href="/blog/tags/概率期望/" style="font-size: 15px;">概率期望</a> <a href="/blog/tags/图论/" style="font-size: 15px;">图论</a></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2021 <a href="/blog/." rel="nofollow">nqiiii's blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/blog/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/blog/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/blog/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/blog/js/smartresize.js?v=0.0.0"></script></div></body></html>
